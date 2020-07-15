@@ -2,16 +2,14 @@
 
 void		*release_t_cl_builder(t_cl_builder *cl)
 {
-	cl_int ret;
-
 	if (cl->program)
-		ret = clReleaseProgram(cl->program);
+		clReleaseProgram(cl->program);
 	if (cl->queue)
-		ret = clReleaseCommandQueue(cl->queue);
+		clReleaseCommandQueue(cl->queue);
 	if (cl->context)
-		ret = clReleaseContext(cl->context);
+		clReleaseContext(cl->context);
 	if (cl->device)
-		ret = clReleaseDevice(cl->device);
+		clReleaseDevice(cl->device);
 	return (NULL);
 }
 

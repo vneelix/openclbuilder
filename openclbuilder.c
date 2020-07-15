@@ -2,14 +2,12 @@
 
 static void		*release_t_cl_program(t_cl_program *prog)
 {
-	cl_int	ret;
-
 	if (prog->src)
 		ft_nptr_del((void**)prog->src);
 	if (prog->program)
 	{
 		while (prog->size != 0)
-			ret = clReleaseProgram(prog->program[--prog->size]);
+			clReleaseProgram(prog->program[--prog->size]);
 		free(prog->program);
 	}
 	return (NULL);
