@@ -93,6 +93,6 @@ cl_program	*opencl_source_to_program(t_cl_builder *cl,
 	}
 	while (ret && (i != 0))
 		clReleaseProgram(prog[--i]);
-	ft_memdel(ret ? prog : NULL);
+	ft_memdel(ret ? (void**)&prog : NULL);
 	return (!ret ? prog : NULL);
 }
