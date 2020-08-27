@@ -14,3 +14,4 @@ Signature is
 ```C
 openclbuilder(t_cl_builder *cl, char *src_dir, char *inc_dir)
 ```
+You can create a temporary cl_builder structure, pass a directory with source code files and a directory with header files (optional). CL Builder compiles each file separately taking into account the header files and then link the binary file
