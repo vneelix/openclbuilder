@@ -10,4 +10,6 @@ typedef struct	s_cl_builder {
 	cl_program		program;
 }				t_cl_builder;
 ```
-Signature is ```C openclbuilder(t_cl_builder *cl, char *src_dir, char *inc_dir)```
+Signature is ```C
+openclbuilder(t_cl_builder *cl, char *src_dir, char *inc_dir)
+```
